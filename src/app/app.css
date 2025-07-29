@@ -1,0 +1,100 @@
+.main-container {
+  position: relative !important;
+  z-index: 1000 !important;
+}
+
+.slide-in-right {
+  animation: slideInRight 0.7s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+@keyframes slideInRight {
+  from {
+    opacity: 0;
+    transform: translateX(40px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+/* Efectos para cards */
+.modern-card:hover {
+  transform: translateY(-4px);
+  box-shadow: var(--shadow-large);
+}
+
+/* Mejoras para iconos y estadísticas */
+.fs-1 {
+  font-size: 3.5rem !important;
+}
+
+.fs-2 {
+  font-size: 2.5rem !important;
+}
+
+/* Efectos hero section */
+.card-body-modern h1 {
+  font-size: 2.5rem;
+  margin-bottom: 1.5rem;
+}
+
+.lead {
+  font-size: 1.1rem;
+  line-height: 1.7;
+}
+
+/* Mejoras para las estadísticas */
+.modern-card .card-body-modern h3 {
+  color: var(--text-primary);
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 800;
+  font-size: 2rem;
+}
+
+/* Efectos de loading mejorados */
+.text-center .fas.fa-database {
+  animation: pulse 2s infinite;
+}
+
+@keyframes pulse {
+  0% {
+    opacity: 0.6;
+    transform: scale(1);
+  }
+  50% {
+    opacity: 1;
+    transform: scale(1.05);
+  }
+  100% {
+    opacity: 0.6;
+    transform: scale(1);
+  }
+}
+
+/* Mejoras para navegación */
+.university-header nav a {
+  padding: 0.5rem 1rem;
+  border-radius: 8px;
+  transition: all 0.3s ease;
+}
+
+.university-header nav a:hover {
+  background: rgba(255, 107, 0, 0.1);
+  transform: translateY(-1px);
+}
+
+/* Responsive mejorado */
+@media (max-width: 768px) {
+  .card-body-modern h1 {
+    font-size: 2rem;
+  }
+  
+  .lead {
+    font-size: 1rem;
+  }
+  
+  .modern-card .card-body-modern h3 {
+    font-size: 1.5rem;
+  }
+}
