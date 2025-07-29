@@ -1,59 +1,74 @@
-# RegistroEstudiantesFrontend
+# Sistema de Registro de Estudiantes - Frontend
 
-This project was generated using [Angular CLI](https://github.com/angular/angular-cli) version 20.1.3.
+Aplicación web desarrollada con Angular 19 para el registro de estudiantes y gestión de materias.
 
-## Development server
+## Instalación y Ejecución
 
-To start a local development server, run:
+### Prerrequisitos
+- Node.js 18+
+- Angular CLI 19
+- Backend ejecutándose en http://localhost:5186
 
+### Ejecutar la aplicación
 ```bash
+git clone [url-repositorio]
+cd registro-estudiantes-frontend
+npm install
 ng serve
 ```
 
-Once the server is running, open your browser and navigate to `http://localhost:4200/`. The application will automatically reload whenever you modify any of the source files.
+**URL de acceso:** http://localhost:4200
 
-## Code scaffolding
+## Estructura del Proyecto
 
-Angular CLI includes powerful code scaffolding tools. To generate a new component, run:
+- **src/app/components**: Componentes de la aplicación
+- **src/app/services**: Servicios para comunicación con API
+- **src/app/models**: Interfaces y modelos TypeScript
 
-```bash
-ng generate component component-name
+## Funcionalidades
+
+- Dashboard con estadísticas en tiempo real
+- Formulario de registro de estudiantes con validaciones
+- Selección inteligente de materias (máximo 3, sin repetir profesores)
+- Lista de estudiantes registrados
+- Visualización de materias y profesores disponibles
+- Diseño responsive y moderno
+
+## Validaciones del Frontend
+
+- Formularios reactivos con validación en tiempo real
+- Validación de email y teléfono
+- Control de máximo 3 materias por estudiante
+- Prevención de selección de materias del mismo profesor
+
+## Configuración de API
+
+La URL del backend se configura en:
+```typescript
+// src/environments/environment.ts
+export const environment = {
+  production: false,
+  apiUrl: 'http://localhost:5186/api'
+};
 ```
 
-For a complete list of available schematics (such as `components`, `directives`, or `pipes`), run:
+## Tecnologías Utilizadas
+
+- Angular 19
+- TypeScript
+- Standalone Components
+- Reactive Forms
+- Bootstrap 5
+- Font Awesome
+
+## Build para Producción
 
 ```bash
-ng generate --help
+ng build --prod
 ```
 
-## Building
+Los archivos se generan en la carpeta `dist/`
 
-To build the project run:
+---
 
-```bash
-ng build
-```
-
-This will compile your project and store the build artifacts in the `dist/` directory. By default, the production build optimizes your application for performance and speed.
-
-## Running unit tests
-
-To execute unit tests with the [Karma](https://karma-runner.github.io) test runner, use the following command:
-
-```bash
-ng test
-```
-
-## Running end-to-end tests
-
-For end-to-end (e2e) testing, run:
-
-```bash
-ng e2e
-```
-
-Angular CLI does not come with an end-to-end testing framework by default. You can choose one that suits your needs.
-
-## Additional Resources
-
-For more information on using the Angular CLI, including detailed command references, visit the [Angular CLI Overview and Command Reference](https://angular.dev/tools/cli) page.
+**Desarrollado por:** Kevin H. Tovar L.
